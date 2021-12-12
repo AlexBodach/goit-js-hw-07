@@ -32,6 +32,7 @@ function closeModalWithEsc (instance) {
         window.addEventListener('keydown', () => {     
             if(event.key === 'Escape') {
                instance.close()
+               window.removeEventListener('keydown', () => {})
             }
         })
     }
